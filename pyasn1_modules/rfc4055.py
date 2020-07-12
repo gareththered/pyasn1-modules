@@ -51,13 +51,13 @@ id_pSpecified = _OID(1, 2, 840, 113549, 1, 1, 9)
 
 id_RSASSA_PSS = _OID(1, 2, 840, 113549, 1, 1, 10)
 
-sha256WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 11)
+id_sha256WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 11)
 
-sha384WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 12)
+id_sha384WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 12)
 
-sha512WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 13)
+id_sha512WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 13)
 
-sha224WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 14)
+id_sha224WithRSAEncryption = _OID(1, 2, 840, 113549, 1, 1, 14)
 
 sha1Identifier = rfc5280.AlgorithmIdentifier()
 sha1Identifier['algorithm'] = id_sha1
@@ -78,6 +78,22 @@ sha384Identifier['parameters'] = univ.Null("")
 sha512Identifier = rfc5280.AlgorithmIdentifier()
 sha512Identifier['algorithm'] = id_sha512
 sha512Identifier['parameters'] = univ.Null("")
+
+sha224WithRSAEncryptionIdentifier = rfc5280.AlgorithmIdentifier()
+sha224WithRSAEncryptionIdentifier['algorithm'] = id_sha224WithRSAEncryption
+sha224WithRSAEncryptionIdentifier['parameters'] = univ.Null("")
+
+sha256WithRSAEncryptionIdentifier = rfc5280.AlgorithmIdentifier()
+sha256WithRSAEncryptionIdentifier['algorithm'] = id_sha256WithRSAEncryption
+sha256WithRSAEncryptionIdentifier['parameters'] = univ.Null("")
+
+sha384WithRSAEncryptionIdentifier = rfc5280.AlgorithmIdentifier()
+sha384WithRSAEncryptionIdentifier['algorithm'] = id_sha384WithRSAEncryption
+sha384WithRSAEncryptionIdentifier['parameters'] = univ.Null("")
+
+sha512WithRSAEncryptionIdentifier = rfc5280.AlgorithmIdentifier()
+sha512WithRSAEncryptionIdentifier['algorithm'] = id_sha512WithRSAEncryption
+sha512WithRSAEncryptionIdentifier['parameters'] = univ.Null("")
 
 mgf1SHA1Identifier = rfc5280.AlgorithmIdentifier()
 mgf1SHA1Identifier['algorithm'] = id_mgf1
@@ -249,6 +265,10 @@ _algorithmIdentifierMapUpdate = {
     id_sha256: univ.Null(),
     id_sha384: univ.Null(),
     id_sha512: univ.Null(),
+    id_sha224WithRSAEncryption: univ.Null(),
+    id_sha256WithRSAEncryption: univ.Null(),
+    id_sha384WithRSAEncryption: univ.Null(),
+    id_sha512WithRSAEncryption: univ.Null(),
     id_mgf1: rfc5280.AlgorithmIdentifier(),
     id_pSpecified: univ.OctetString(),
     id_RSAES_OAEP: RSAES_OAEP_params(),
